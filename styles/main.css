@@ -1,0 +1,84 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Readex Pro', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://media.gettyimages.com/photos/example-image-id-1337668467') no-repeat center center / cover fixed;
+    min-height: 100vh;
+}
+
+/* Container Like Bootstrap */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+/* Row */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1rem 0;
+}
+
+/* Column */
+.col {
+    flex: 1;
+    min-width: 280px;
+    padding: 1rem;
+}
+
+/* Card */
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.card h2 {
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+/* Text */
+.card p {
+    color: #ddd;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: #d33682;
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #b42d6e;
+}
+
+/* Hide Streamlit Default */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
