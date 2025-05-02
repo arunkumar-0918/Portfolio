@@ -4,4 +4,4 @@ plotly==5.20.0
 dash==2.17.0
 streamlit==1.34.0
 Pillow==10.2.0
-streamlit-option-menu
+streamlit-option-menu==0.3.6
