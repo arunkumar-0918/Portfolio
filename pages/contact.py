@@ -44,5 +44,4 @@ if submit_button:
     st.snow()
 
 # Show latest data from the CSV file
-df = pd.read_csv(csv_file)
-st.dataframe(df.style.hide(axis="index"))
+
