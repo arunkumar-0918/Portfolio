@@ -112,33 +112,49 @@ st.subheader("Work History")
 st.write("---")
 
 # Job 1
-st.write("🚧", "**Senior Data Analyst | Ross Industries**")
-st.write("02/2020 - Present")
+# Job 1
+st.write("🚧", "**Senior Software Engineer | HCL Technologies Pvt. Ltd.**")
+st.write("05/2024 - Present")
 st.write("""
-- ► Used PowerBI and SQL to redefine and track KPIs surrounding marketing initiatives, boosting conversion rate by 38%
-- ► Led a team of 4 analysts to implement A/B tests resulting in 15% more leads
-- ► Redesigned data model to improve predictions by 12%
+- ► Delivered 5+ Power BI dashboards aligned to stakeholder KPIs, reducing manual reporting by 30%  
+- ► Automated workflows using Power Apps, Power Automate, and UIPath, improving team efficiency by 40%  
+- ► Built cross-functional digital solutions using Figma and Power Platform  
+- ► Conducted onboarding sessions and documentation, achieving 90% adoption of BI tools  
 """)
 
 # Job 2
 st.write('\n')
-st.write("🚧", "**Data Analyst | Liberty Mutual Insurance**")
-st.write("01/2018 - 02/2022")
+st.write("🚧", "**Software Engineer | HCL Technologies Pvt. Ltd.**")
+st.write("05/2022 - 05/2024")
 st.write("""
-- ► Built data models to generate insights, boosting sales efforts by 12%
-- ► Modeled renewal likelihood leading to $300K YoY revenue increase
-- ► Modeled info to drive auto policy pricing
+- ► Created low-code apps and automated workflows, saving up to 80% manual effort  
+- ► Developed ETL pipelines via Azure Data Factory and Synapse Analytics for centralized reporting  
+- ► Built secure Azure Data Lakes to enhance compliance and data accessibility  
+- ► Improved dashboard availability and pipeline reliability by coordinating with DevOps  
 """)
 
 # Job 3
 st.write('\n')
-st.write("🚧", "**Data Analyst | Chegg**")
-st.write("04/2015 - 01/2018")
+st.write("🚧", "**Software Engineer | HCL Technologies Pvt. Ltd.**")
+st.write("02/2021 - 05/2022")
 st.write("""
-- ► Devised KPIs across website with cross-functional teams, increasing organic traffic by 120%
-- ► Improved customer communication processes by 18%
-- ► Oversaw return data handling process
+- ► Built 10+ Power BI dashboards for R&D, finance, and sales to support decision-making  
+- ► Automated recurring reports, cutting reporting cycle time by 70%  
+- ► Created Figma UI wireframes for dashboard validation and adoption  
+- ► Designed tailored analytics solutions through stakeholder collaboration  
 """)
+
+# Job 4
+st.write('\n')
+st.write("🚧", "**Freelance Automation & BI Developer | Remote**")
+st.write("01/2020 - Present")
+st.write("""
+- ► Built automation workflows using N8N, OpenAI, and Python for lead tracking and CRM integrations  
+- ► Developed dashboards and analytics pipelines using Power BI and AWS stack  
+- ► Designed AI-based bots and workflow engines for small businesses  
+- ► Consulted across domains to deliver scalable, automated data solutions  
+""")
+
 
 
 # Social media links
