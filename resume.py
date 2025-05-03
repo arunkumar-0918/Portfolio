@@ -114,7 +114,7 @@ st.write("---")
 # Job 1
 # Job 1
 st.write('\n')
-st.write('\n')
+st.markdown("&nbsp;", unsafe_allow_html=True)
 st.write("🚧", "**Senior Software Engineer | HCL Technologies Pvt. Ltd.**")
 st.write("05/2024 - Present")
 st.write("""
@@ -126,7 +126,7 @@ st.write("""
 
 # Job 2
 st.write('\n')
-st.write('\n')
+st.markdown("&nbsp;", unsafe_allow_html=True)
 st.write("🚧", "**Software Engineer | HCL Technologies Pvt. Ltd.**")
 st.write("05/2022 - 05/2024")
 st.write("""
@@ -138,7 +138,7 @@ st.write("""
 
 # Job 3
 st.write('\n')
-st.write('\n')
+st.markdown("&nbsp;", unsafe_allow_html=True)
 st.write("🚧", "**Software Engineer | HCL Technologies Pvt. Ltd.**")
 st.write("02/2021 - 05/2022")
 st.write("""
@@ -150,7 +150,7 @@ st.write("""
 
 # Job 4
 st.write('\n')
-st.write('\n')
+st.markdown("&nbsp;", unsafe_allow_html=True)
 st.write("🚧", "**Freelance Automation & BI Developer | Remote**")
 st.write("01/2020 - Present")
 st.write("""
