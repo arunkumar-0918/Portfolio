@@ -99,10 +99,11 @@ st.write('\n')
 st.subheader("Experience & Qualifications")
 st.write("---")
 st.write("""
-- ✔️ 7 Years experience extracting actionable insights from data
-- ✔️ Strong hands-on experience and knowledge in Python and Excel
-- ✔️ Good understanding of statistical principles and their respective applications
-- ✔️ Excellent team player and displaying strong sense of initiative on tasks
+- ✔️ Results-driven Software Engineer with 4+ years of experience specializing in data analytics, automation, and cloud-native solution development. Proven ability to deliver scalable, high-impact solutions that reduce manual effort and drive business insights.
+- ✔️ Automation Specialist: Designed and deployed low-code/no-code tools using Power BI, Power Apps, and Azure Data Factory, automating workflows and saving up to 80% manual effort.
+- ✔️ Cloud & DevOps Practitioner: Proficient in AWS and Azure, with hands-on experience in CI/CD pipelines, Kubernetes, and end-to-end cloud deployment.
+- ✔️ AI Learner & N8N Explorer: Actively building AI-driven automations and intelligent workflows using N8N, Python, and ML frameworks to enhance data-driven processes.
+- ✔️ Business-Focused Engineer: Strong track record of aligning technical solutions with stakeholder needs—developed 10+ dashboards and automation tools improving data accessibility across teams.
 """)
 
 # --- WORK HISTORY ---
