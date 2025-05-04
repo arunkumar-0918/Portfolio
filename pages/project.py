@@ -1,4 +1,14 @@
 import streamlit as st
+from PIL import Image
+from pathlib import Path
+# Go up from /pages/ to /resume/
+current_dir = Path(__file__).parent.parent
+
+# Correct paths from the project root
+css_file = current_dir / "styles" / "main.css"
+resume_file = current_dir / "assets" / "CV.pdf"
+profile_pic_path = current_dir / "assets" / "arun_circle.png"
+image_pic = current_dir / "image" / "creative-thinking.png"
 st.markdown(
     """
     <style>
@@ -9,7 +19,16 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
+st.markdown("""
+    <style>
+        [data-testid="stSidebar"] {
+            display: none;
+        }
+        [data-testid="stSidebarNav"] {
+            display: none;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 # Example Project Entries
 project_list = [
     # Automation & Cloud Projects
@@ -96,13 +115,15 @@ project_list = [
         "tech_stack": "Power BI, Azure Monitor"
     }
 ]
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+def showproject():
 
-
-for project in project_list:
-    st.markdown(f"""
-    ### {project['title']}
-    🛠️ {project['tech_stack']}  
-    {project['description']}
-    """)
-    st.write('\n')  # space between projects
+    for project in project_list:
+        st.markdown(f"""
+        ### {project['title']}
+        🛠️ {project['tech_stack']}  
+        {project['description']}
+        """)
+        st.write('\n')  # space between projects
 
