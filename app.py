@@ -25,8 +25,12 @@ NAME = "Arunkumar A"
 DESCRIPTION = "Senior Data Analyst, assisting enterprises by supporting data-driven decision-making."
 EMAIL = "arunrmdeee@gmail.com"
 import pages as pg
-pages = ["home","skills", "project", "contact"]
-
+pages = {
+    "home": "🏠 Home",
+    "skills": "🛠️ Skills",
+    "project": "📁 Projects",
+    "contact": "📞 Contact"
+}
 styles = {
     "nav": {
         "background": "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6))",
@@ -72,21 +76,31 @@ options = {
     "show_menu": False,
     "show_sidebar": False,
 }
+pages = {
+    "home": "🏠 Home",
+    "skills": "🛠️ Skills",
+    "project": "📁 Projects",
+    "contact": "📞 Contact"
+}
 
-pages = ["🏠 Home", "🛠️ Skills", "📁 Projects", "📞 Contact"]
-page = st_navbar(
-    pages,
+# Show navbar using the values (the user-friendly labels)
+page_label = st_navbar(
+    list(pages.values()),
     styles=styles,
     options=options,
 )
 
+# Find the key (like "home") corresponding to the selected label
+page_key = next(key for key, value in pages.items() if value == page_label)
+
 functions = {
-    "home":pg.showhome,
+    "home": pg.showhome,
     "skills": pg.skills,
     "project": pg.showproject,
     "contact": pg.contact,
 }
-go_to = functions.get(page)
+
+go_to = functions.get(page_key)
 if go_to:
     go_to()
 
