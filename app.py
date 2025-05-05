@@ -1,60 +1,92 @@
 import streamlit as st
-from pages import home, skills, project, contact
-
-# Initialize session state
-if "page" not in st.session_state:
-    st.session_state.page = "home"
-
-# Set page config
-st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
-
-# Custom CSS for fixed navbar
+from PIL import Image
+from pathlib import Path
+from streamlit_navigation_bar import st_navbar
+current_dir = Path(__file__).parent.parent if "__file__" in locals() else Path.cwd()
+print(current_dir)
+css_file = current_dir / "styles" / "main.css"
+resume_file = current_dir / "assets" / "CV.pdf"
+profile_pic_path = current_dir / "assets" / "arun_circle.png"
+image_pic = current_dir / "image" / "creative-thinking.png"
 st.markdown("""
-<style>
-    .fixed-nav {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        z-index: 999;
-        display: flex;
-        gap: 8px;
-        background-color: rgba(255,255,255,0.9);
-        padding: 8px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    <style>
+        [data-testid="stSidebar"] {
+            display: none;
+        }
+        [data-testid="stSidebarNav"] {
+            display: none;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+# --- GENERAL SETTINGS ---
+PAGE_TITLE = "My App"
+PAGE_ICON = "📊"
+NAME = "Arunkumar A"
+DESCRIPTION = "Senior Data Analyst, assisting enterprises by supporting data-driven decision-making."
+EMAIL = "arunrmdeee@gmail.com"
+import pages as pg
+pages = ["home","skills", "project", "contact"]
+
+styles = {
+    "nav": {
+        "background": "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6))",
+        "display": "flex",
+        "justify-content": "center",
+        "align-items": "center",  # Vertical centering
+        "padding": "0px 0", 
+        "position": "fixed",
+        "top": "0",
+        "width": "100%",
+        "z-index": "1000",
+        "box-sizing": "border-box",
+        "gap": "0",  # Remove gaps between items
+        "margin": "0"  # Remove default margins
+    },
+    "span": {
+        "padding": "10px 20px",
+        "border-radius": "20px",
+        "background-color": "rgba(255, 255, 255, 0.1)",
+        "margin": "0",  # Remove horizontal margins
+        "transition": "all 0.3s ease",
+        "display": "inline-flex",
+        "align-items": "center",
+        "height": "40px",
+        "box-sizing": "border-box",
+        "cursor": "pointer"
+    },
+    "active": {
+        "background-color": "white",
+        "color": "black",
+        "font-weight": "bold",
+        "padding": "10px 20px",
+        "border-radius": "20px",
+        "margin": "0",  # Remove horizontal margins
+        "display": "inline-flex",
+        "align-items": "center",
+        "height": "40px",
+        "box-sizing": "border-box",
+        "cursor": "pointer"
     }
-    .navbar-spacer {
-        height: 60px;
-    }
-</style>
-""", unsafe_allow_html=True)
+}
+options = {
+    "show_menu": False,
+    "show_sidebar": False,
+}
 
-# Create a container for the fixed navbar
-nav_cols = st.columns([5,1,1,1,1])
-with nav_cols[0]:
-    st.write("")  # Empty space to push buttons right
-with nav_cols[1]:
-    if st.button("Home"):
-        st.session_state.page = "home"
-with nav_cols[2]:
-    if st.button("Skills"):
-        st.session_state.page = "skills"
-with nav_cols[3]:
-    if st.button("Projects"):
-        st.session_state.page = "project"
-with nav_cols[4]:
-    if st.button("Contact"):
-        st.session_state.page = "contact"
 
-# Add spacer
-st.markdown("<div class='navbar-spacer'></div>", unsafe_allow_html=True)
+page = st_navbar(
+    pages,
+    styles=styles,
+    options=options,
+)
 
-# Show the appropriate page
-if st.session_state.page == "home":
-    home.show()
-elif st.session_state.page == "skills":
-    skills.show()
-elif st.session_state.page == "project":
-    project.show()
-elif st.session_state.page == "contact":
-    contact.show()
+functions = {
+    "home":pg.showhome,
+    "skills": pg.skills,
+    "project": pg.showproject,
+    "contact": pg.contact,
+}
+go_to = functions.get(page)
+if go_to:
+    go_to()
+
