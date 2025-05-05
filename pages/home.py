@@ -1,7 +1,6 @@
 import streamlit as st
 from PIL import Image
 from pathlib import Path
-from streamlit_navigation_bar import st_navbar
 from pathlib import Path
 
 # Go up from /pages/ to /resume/
