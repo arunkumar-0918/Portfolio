@@ -73,7 +73,7 @@ options = {
     "show_sidebar": False,
 }
 
-
+pages = ["🏠 Home", "🛠️ Skills", "📁 Projects", "📞 Contact"]
 page = st_navbar(
     pages,
     styles=styles,
