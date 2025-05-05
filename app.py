@@ -77,10 +77,10 @@ options = {
     "show_sidebar": False,
 }
 pages = {
-    "home": "🏠 Home",
-    "skills": "🛠️ Skills",
-    "project": "📁 Projects",
-    "contact": "📞 Contact"
+    "home": "🏠\u00A0Home",
+    "skills": "🛠️\u00A0Skills",
+    "project": "📁\u00A0Projects",
+    "contact": "📞\u00A0Contact"
 }
 
 # Show navbar using the values (the user-friendly labels)
